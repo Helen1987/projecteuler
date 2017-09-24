@@ -23,5 +23,12 @@ namespace UnitTests
             int max = 4000000;
             Console.WriteLine(4613732, task.Run(max), $"Sum of Even Fibonacci numbers below {max} is incorrect");
         }
+
+        public void TestLargestPrimFactor()
+        {
+            var task = new Task3();
+            long number = 600851475143;
+            Console.WriteLine(6857, task.Run(number), $"Largest prime factor of {number} is incorrect");
+        }
     }
 }

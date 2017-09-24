@@ -8,10 +8,7 @@ namespace Euler
 {
     public class Task1
     {
-        private bool IsMultiple(int number)
-        {
-            return number % 5 == 0 || number % 3 == 0;
-        }
+        private bool IsMultiple(int number) => number % 5 == 0 || number % 3 == 0;
 
         public int Run(int maxNumber)
         {
