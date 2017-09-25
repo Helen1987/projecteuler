@@ -49,6 +49,7 @@
     <Compile Include="1-10\Task5 - Smallest multiple.cs" />
     <Compile Include="1-10\Task6 - Sum square difference.cs" />
     <Compile Include="1-10\Task7 - 10001st prime.cs" />
+    <Compile Include="1-10\Task8 - Largest product in a series.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

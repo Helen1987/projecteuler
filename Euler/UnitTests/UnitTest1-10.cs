@@ -97,5 +97,21 @@ namespace UnitTests
             int count = 10001;
             Assert.AreEqual(104743, task.Run(count), $"{count}'s prime number is incorrect");
         }
+
+        [TestMethod]
+        public void TestLargestProductInASeries4Digits()
+        {
+            var task = new Task8();
+            int count = 4;
+            Assert.AreEqual(5832, task.Run(count), $"Largest product of {count} digets in a series is incorrect");
+        }
+
+        [TestMethod]
+        public void TestLargestProductInASeries13Digits()
+        {
+            var task = new Task8();
+            int count = 13;
+            Assert.AreEqual(23514624000, task.Run(count), $"Largest product of {count} digets in a series is incorrect");
+        }
     }
 }
