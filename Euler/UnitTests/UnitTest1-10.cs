@@ -47,5 +47,23 @@ namespace UnitTests
             int digitsCount = 3;
             Assert.AreEqual(906609, task.Run(digitsCount), $"Largest palindrome product of {digitsCount} is incorrect");
         }
+
+        [TestMethod]
+        public void TestSmallestMultipleUpTo10()
+        {
+            var task = new Task5();
+            int upToNumber = 10;
+            Assert.AreEqual(2520, task.Run(upToNumber), $"The smallest positive number that is evenly divisible by all of the numbers from 1" +
+                $" to {upToNumber} digits is incorrect");
+        }
+
+        [TestMethod]
+        public void TestSmallestMultipleUpTo20()
+        {
+            var task = new Task5();
+            int upToNumber = 20;
+            Assert.AreEqual(232792560, task.Run(upToNumber), $"The smallest positive number that is evenly divisible by all of the numbers from 1" +
+                $" to {upToNumber} digits is incorrect");
+        }
     }
 }

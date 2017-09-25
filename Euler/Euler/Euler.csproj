@@ -46,6 +46,7 @@
     <Compile Include="1-10\Task1 - Multiples of 3 and 5.cs" />
     <Compile Include="1-10\Task2 - Even Fibonacci numbers.cs" />
     <Compile Include="1-10\Task4 - Largest palindrome product.cs" />
+    <Compile Include="1-10\Task5 - Smallest multiple.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
