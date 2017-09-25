@@ -65,5 +65,21 @@ namespace UnitTests
             Assert.AreEqual(232792560, task.Run(upToNumber), $"The smallest positive number that is evenly divisible by all of the numbers from 1" +
                 $" to {upToNumber} digits is incorrect");
         }
+
+        [TestMethod]
+        public void TestSumSquareDifferenceUpTo10()
+        {
+            var task = new Task6();
+            int upToNumber = 10;
+            Assert.AreEqual(2640, task.Run(upToNumber), $"Sum of square difference up to {upToNumber} is incorrect");
+        }
+
+        [TestMethod]
+        public void TestSumSquareDifferenceUpTo100()
+        {
+            var task = new Task6();
+            int upToNumber = 100;
+            Assert.AreEqual(25164150, task.Run(upToNumber), $"Sum of square difference up to {upToNumber} is incorrect");
+        }
     }
 }
