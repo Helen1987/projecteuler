@@ -113,5 +113,12 @@ namespace UnitTests
             int count = 13;
             Assert.AreEqual(23514624000, task.Run(count), $"Largest product of {count} digets in a series is incorrect");
         }
+
+        [TestMethod]
+        public void TestSpecialPythagoreanTriplet()
+        {
+            var task = new Task9();
+            Assert.AreEqual(31875000, task.Run(), $"Special Pythagorean triplet product is is incorrect");
+        }
     }
 }
