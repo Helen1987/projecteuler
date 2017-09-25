@@ -81,5 +81,21 @@ namespace UnitTests
             int upToNumber = 100;
             Assert.AreEqual(25164150, task.Run(upToNumber), $"Sum of square difference up to {upToNumber} is incorrect");
         }
+
+        [TestMethod]
+        public void Test6thPrime()
+        {
+            var task = new Task7();
+            int count = 6;
+            Assert.AreEqual(13, task.Run(count), $"{count}'s prime number is incorrect");
+        }
+
+        [TestMethod]
+        public void Test10001stPrime()
+        {
+            var task = new Task7();
+            int count = 10001;
+            Assert.AreEqual(104743, task.Run(count), $"{count}'s prime number is incorrect");
+        }
     }
 }
