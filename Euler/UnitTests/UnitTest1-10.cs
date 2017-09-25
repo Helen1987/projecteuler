@@ -21,14 +21,31 @@ namespace UnitTests
         {
             var task = new Task2();
             int max = 4000000;
-            Console.WriteLine(4613732, task.Run(max), $"Sum of Even Fibonacci numbers below {max} is incorrect");
+            Assert.AreEqual(4613732, task.Run(max), $"Sum of Even Fibonacci numbers below {max} is incorrect");
         }
 
+        [TestMethod]
         public void TestLargestPrimFactor()
         {
             var task = new Task3();
             long number = 600851475143;
-            Console.WriteLine(6857, task.Run(number), $"Largest prime factor of {number} is incorrect");
+            Assert.AreEqual(6857, task.Run(number), $"Largest prime factor of {number} is incorrect");
+        }
+
+        [TestMethod]
+        public void TestLargestPalindromeProduct2Digits()
+        {
+            var task = new Task4();
+            int digitsCount = 2;
+            Assert.AreEqual(9009, task.Run(digitsCount), $"Largest palindrome product of {digitsCount} is incorrect");
+        }
+
+        [TestMethod]
+        public void TestLargestPalindromeProduct3Digit()
+        {
+            var task = new Task4();
+            int digitsCount = 3;
+            Assert.AreEqual(906609, task.Run(digitsCount), $"Largest palindrome product of {digitsCount} is incorrect");
         }
     }
 }
