@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="1-10\Task 3 - Largest prime factor.cs" />
     <Compile Include="1-10\Task1 - Multiples of 3 and 5.cs" />
+    <Compile Include="1-10\Task10 - Summation of primes.cs" />
     <Compile Include="1-10\Task2 - Even Fibonacci numbers.cs" />
     <Compile Include="1-10\Task4 - Largest palindrome product.cs" />
     <Compile Include="1-10\Task5 - Smallest multiple.cs" />

@@ -120,5 +120,13 @@ namespace UnitTests
             var task = new Task9();
             Assert.AreEqual(31875000, task.Run(), $"Special Pythagorean triplet product is is incorrect");
         }
+
+        [TestMethod]
+        public void TestSummationOfPrimes()
+        {
+            var task = new Task10();
+            int maxValue = 2000000;
+            Assert.AreEqual(142913828922, task.Run(maxValue), $"Summation of primes blow {maxValue} is incorrect");
+        }
     }
 }
