@@ -31,6 +31,8 @@ namespace Euler
         {
             foreach (int prime in primes)
             {
+                if (prime > Math.Sqrt(suggestedPrime))
+                    return true;
                 if (suggestedPrime % prime == 0)
                     return false;
             }

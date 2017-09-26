@@ -52,6 +52,7 @@
     <Compile Include="1-10\Task7 - 10001st prime.cs" />
     <Compile Include="1-10\Task8 - Largest product in a series.cs" />
     <Compile Include="1-10\Task9 - Special Pythagorean triplet.cs" />
+    <Compile Include="11-20\Task11 - Largest product in a grid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
