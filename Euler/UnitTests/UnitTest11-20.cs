@@ -39,5 +39,21 @@ namespace UnitTests
             int limit = 1000000;
             Assert.AreEqual(837799, task.Run(limit), $"Starting number under {limit} which produces the longest chain divisors is incorrect");
         }
+
+        [TestMethod]
+        public void TestLatticePaths2x2()
+        {
+            int columns = 2, rows = 2;
+            var task = new Task15(rows, columns);
+            Assert.AreEqual(6, task.Run(), $"Routes count in {rows}x{columns} grid is incorrect");
+        }
+
+        [TestMethod]
+        public void TestLatticePaths20x20()
+        {
+            int columns = 20, rows = 20;
+            var task = new Task15(rows, columns);
+            Assert.AreEqual(137846528820, task.Run(), $"Routes count in {rows}x{columns} grid is incorrect");
+        }
     }
 }
