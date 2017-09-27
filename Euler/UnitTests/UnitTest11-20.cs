@@ -30,5 +30,14 @@ namespace UnitTests
             var task = new Task13();
             Assert.AreEqual("5537376230", task.Run(numbersCount), $"First {numbersCount} digits of large sum are incorrect");
         }
+
+
+        [TestMethod]
+        public void TestLongestCollatzSequence()
+        {
+            var task = new Task14();
+            int limit = 1000000;
+            Assert.AreEqual(837799, task.Run(limit), $"Starting number under {limit} which produces the longest chain divisors is incorrect");
+        }
     }
 }

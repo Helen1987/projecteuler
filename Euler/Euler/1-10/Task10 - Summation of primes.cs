@@ -23,10 +23,10 @@ namespace Euler
                     primes.Add(i);
                 }
             }
-            return GetPrimeProduct();
+            return GetPrimeSum();
         }
 
-        private long GetPrimeProduct()
+        private long GetPrimeSum()
         {
             long product = 0;
             foreach (int prime in primes)

@@ -56,6 +56,7 @@
     <Compile Include="11-20\Task11 - Largest product in a grid.cs" />
     <Compile Include="11-20\Task12 - Highly divisible triangular number.cs" />
     <Compile Include="11-20\Task13 - Large sum.cs" />
+    <Compile Include="11-20\Task14 - Longest Collatz sequence.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
