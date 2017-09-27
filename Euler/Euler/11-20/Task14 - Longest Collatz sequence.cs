@@ -23,20 +23,33 @@ namespace Euler
     /// </summary>
     public class Task14
     {
+        // number to count of terms
+        private Dictionary<long, int> memo = new Dictionary<long, int>();
+
         private long GetNextNumber(long number) => (number % 2 == 0) ? number / 2 : checked ( 3 * number + 1 );
+
+        private int GetTermsCount(long number, int count = 1)
+        {
+            if (number == 1)
+            {
+                return count;
+            }
+            if (memo.ContainsKey(number))
+            {
+                return memo[number];
+            }
+            int finalCount = GetTermsCount(GetNextNumber(number), count + 1) + 1;
+            memo.Add(number, finalCount);
+            return finalCount;
+        }
 
         public int Run(int largestNumber)
         {
             int largestChainCount = -1, largestChainNumber = 1;
             for (int i = 2; i < largestNumber; ++i)
             {
-                long nextNumber = i;
-                int count = 1;
-                while (nextNumber != 1)
-                {
-                    nextNumber = GetNextNumber(nextNumber);
-                    count++;
-                }
+                int count = GetTermsCount(i);
+
                 if (count > largestChainCount)
                 {
                     largestChainCount = count;
