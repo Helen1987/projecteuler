@@ -16,6 +16,14 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void TestHighlyDivisibleTriangularNumber()
+        {
+            var task = new Task12();
+            int numberOfDivisors = 500;
+            Assert.AreEqual(76576500, task.Run(numberOfDivisors), $"The value of the first triangle number to have over {numberOfDivisors} divisors is incorrect");
+        }
+
+        [TestMethod]
         public void TestLargeSum()
         {
             int numbersCount = 10;
