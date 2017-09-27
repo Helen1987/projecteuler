@@ -55,5 +55,21 @@ namespace UnitTests
             var task = new Task15(rows, columns);
             Assert.AreEqual(137846528820, task.Run(), $"Routes count in {rows}x{columns} grid is incorrect");
         }
+
+        [TestMethod]
+        public void TestPower15DigitSum()
+        {
+            int power = 15;
+            var task = new Task16();
+            Assert.AreEqual(26, task.Run(power), $"The sum of the digits of the number 2^{power} is incorrect");
+        }
+
+        [TestMethod]
+        public void TestPower1000DigitSum()
+        {
+            int power = 1000;
+            var task = new Task16();
+            Assert.AreEqual(1366, task.Run(power), $"The sum of the digits of the number 2^{power} is incorrect");
+        }
     }
 }
