@@ -103,5 +103,12 @@ namespace UnitTests
             var task = new Task17();
             Assert.AreEqual(21124, task.Run(upTo), $"Number letter counts up to {upTo} is incorrect");
         }
+
+        [TestMethod]
+        public void TestMaximumPathSum1()
+        {
+            var task = new Task18();
+            Assert.AreEqual(1074, task.Run(), $"Maximum path sum is incorrect");
+        }
     }
 }
