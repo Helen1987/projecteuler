@@ -64,11 +64,17 @@
     <Compile Include="11-20\Task19 - Counting Sundays.cs" />
     <Compile Include="11-20\Task20 - Factorial digit sum.cs" />
     <Compile Include="21-30\Task21 - Amicable numbers.cs" />
+    <Compile Include="21-30\Task22 - Names scores.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\p022_names.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
