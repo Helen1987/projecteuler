@@ -63,6 +63,7 @@
     <Compile Include="11-20\Task18 -Maximum path sum I.cs" />
     <Compile Include="11-20\Task19 - Counting Sundays.cs" />
     <Compile Include="11-20\Task20 - Factorial digit sum.cs" />
+    <Compile Include="21-30\Task21 - Amicable numbers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

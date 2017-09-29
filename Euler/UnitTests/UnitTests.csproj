@@ -51,6 +51,7 @@
     <Compile Include="UnitTest1-10.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTest11-20.cs" />
+    <Compile Include="UnitTest21-30.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
