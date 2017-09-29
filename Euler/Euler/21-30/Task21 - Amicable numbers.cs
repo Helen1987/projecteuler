@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,19 +21,6 @@ namespace Euler
         private Dictionary<int, int> memo = new Dictionary<int, int>();
         private List<int> amicable = new List<int>();
 
-        private IEnumerable<int> GetDivisors(int number)
-        {
-            yield return 1;
-
-            for (int i = 2; i <= number / 2; ++i)
-            {
-                if (number % i == 0)
-                {
-                    yield return i;
-                }
-            }
-        }
-
         private int GetDofN(int number)
         {
             if (memo.ContainsKey(number))
@@ -40,7 +28,7 @@ namespace Euler
                 return memo[number];
             }
             int sum = 0;
-            foreach (int divisor in GetDivisors(number))
+            foreach (int divisor in Divisors.GetDivisors(number))
             {
                 sum += divisor;
             }

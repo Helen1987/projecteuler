@@ -6,3 +6,6 @@
 /Euler/UnitTests/obj/
 /*.pdf
 /Euler/Euler/Euler.csproj.user
+/Euler/Shared/obj/*
+/Euler/Shared/bin/*
+/Euler/Euler/*.pdf

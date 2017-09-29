@@ -65,6 +65,7 @@
     <Compile Include="11-20\Task20 - Factorial digit sum.cs" />
     <Compile Include="21-30\Task21 - Amicable numbers.cs" />
     <Compile Include="21-30\Task22 - Names scores.cs" />
+    <Compile Include="21-30\Task23 - Non-abundant sums.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -75,6 +76,12 @@
     <Content Include="data\p022_names.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{b5cb426a-4ef7-441d-b79d-e59ce41977f3}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

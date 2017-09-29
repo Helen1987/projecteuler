@@ -21,5 +21,12 @@ namespace UnitTests
             var task = new Task22();
             Assert.AreEqual(871198282, task.Run(), $"The total of all the name scores in the file is incorrect");
         }
+
+        [TestMethod]
+        public void TestNonAbundantSums()
+        {
+            var task = new Task23();
+            Assert.AreEqual(4179871, task.Run(), $"The sum of all the positive integers which cannot be written as the sum of two abundant numbers is incorrect");
+        }
     }
 }
