@@ -117,5 +117,13 @@ namespace UnitTests
             var task = new Task19();
             Assert.AreEqual(171, task.Run(), $"Count of Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000) is incorrect");
         }
+
+        [TestMethod]
+        public void TestFactorialDigitSum()
+        {
+            int factorial = 100;
+            var task = new Task20();
+            Assert.AreEqual(648, task.Run(factorial), $"Factorial digit sum is is incorrect");
+        }
     }
 }
