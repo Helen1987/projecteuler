@@ -66,6 +66,7 @@
     <Compile Include="21-30\Task21 - Amicable numbers.cs" />
     <Compile Include="21-30\Task22 - Names scores.cs" />
     <Compile Include="21-30\Task23 - Non-abundant sums.cs" />
+    <Compile Include="21-30\Task24 - Lexicographic permutations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

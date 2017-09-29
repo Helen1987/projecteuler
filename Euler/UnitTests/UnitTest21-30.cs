@@ -28,5 +28,14 @@ namespace UnitTests
             var task = new Task23();
             Assert.AreEqual(4179871, task.Run(), $"The sum of all the positive integers which cannot be written as the sum of two abundant numbers is incorrect");
         }
+
+        [TestMethod]
+        public void TestLexicographicPermutations()
+        {
+            int availableDigits = 10;
+            int permutationNumber = 1000000;
+            var task = new Task24(availableDigits);
+            Assert.AreEqual(2783915460, task.Run(permutationNumber), $"The {permutationNumber} lexicographic permutation of the digits is is incorrect");
+        }
     }
 }
