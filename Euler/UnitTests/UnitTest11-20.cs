@@ -71,5 +71,37 @@ namespace UnitTests
             var task = new Task16();
             Assert.AreEqual(1366, task.Run(power), $"The sum of the digits of the number 2^{power} is incorrect");
         }
+
+        [TestMethod]
+        public void TestNumberLetterCounts5()
+        {
+            int upTo = 5;
+            var task = new Task17();
+            Assert.AreEqual(19, task.Run(upTo), $"Number letter counts up to {upTo} is incorrect");
+        }
+
+        [TestMethod]
+        public void TestNumberLetterCounts19()
+        {
+            int upTo = 19;
+            var task = new Task17();
+            Assert.AreEqual(106, task.Run(upTo), $"Number letter counts up to {upTo} is incorrect");
+        }
+
+        [TestMethod]
+        public void TestNumberLetterCounts99()
+        {
+            int upTo = 99;
+            var task = new Task17();
+            Assert.AreEqual(854, task.Run(upTo), $"Number letter counts up to {upTo} is incorrect");
+        }
+
+        [TestMethod]
+        public void TestNumberLetterCounts1000()
+        {
+            int upTo = 1000;
+            var task = new Task17();
+            Assert.AreEqual(21124, task.Run(upTo), $"Number letter counts up to {upTo} is incorrect");
+        }
     }
 }

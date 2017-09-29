@@ -59,6 +59,7 @@
     <Compile Include="11-20\Task14 - Longest Collatz sequence.cs" />
     <Compile Include="11-20\Task15 - Lattice paths.cs" />
     <Compile Include="11-20\Task16 - Power digit sum.cs" />
+    <Compile Include="11-20\Task17 - Number letter counts.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
