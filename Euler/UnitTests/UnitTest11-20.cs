@@ -110,5 +110,12 @@ namespace UnitTests
             var task = new Task18();
             Assert.AreEqual(1074, task.Run(), $"Maximum path sum is incorrect");
         }
+
+        [TestMethod]
+        public void TestCountingSundays()
+        {
+            var task = new Task19();
+            Assert.AreEqual(171, task.Run(), $"Count of Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000) is incorrect");
+        }
     }
 }
