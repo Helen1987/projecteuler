@@ -45,5 +45,13 @@ namespace UnitTests
             var task = new Task25();
             Assert.AreEqual(4782, task.Run(digitsNumber), $"The { digitsNumber}-digit Fibonacci number is {task.Run(digitsNumber)}");
         }
+
+        [TestMethod]
+        public void TestReciprocalCycles()
+        {
+            int maxNumber = 1000;
+            var task = new Task26();
+            Assert.AreEqual(983, task.Run(maxNumber), $"The value of d < {maxNumber} for which 1/d contains the longest recurring cycle in its decimal fraction part is {task.Run(maxNumber)}");
+        }
     }
 }
