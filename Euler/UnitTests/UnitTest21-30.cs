@@ -37,5 +37,13 @@ namespace UnitTests
             var task = new Task24(availableDigits);
             Assert.AreEqual(2783915460, task.Run(permutationNumber), $"The {permutationNumber} lexicographic permutation of the digits is is incorrect");
         }
+
+        [TestMethod]
+        public void Test1000DigitFibonacciNumber()
+        {
+            int digitsNumber = 1000;
+            var task = new Task25();
+            Assert.AreEqual(4782, task.Run(digitsNumber), $"The { digitsNumber}-digit Fibonacci number is {task.Run(digitsNumber)}");
+        }
     }
 }
