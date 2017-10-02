@@ -72,6 +72,7 @@
     <Compile Include="21-30\Task27 - Quadratic primes.cs" />
     <Compile Include="21-30\Task28 - Number spiral diagonals.cs" />
     <Compile Include="21-30\Task29 - Distinct powers.cs" />
+    <Compile Include="21-30\Task30 - Digit fifth powers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
