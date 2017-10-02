@@ -6,22 +6,9 @@ using System.Threading.Tasks;
 
 namespace Shared
 {
-    public class ESieve
+    public class ESieve : BaseSieve
     {
         int[] primes;
-        List<int> tempPrimes = new List<int>() { 2 };
-
-        private bool IsProposedPrime(int suggestedPrime)
-        {
-            foreach (int prime in tempPrimes)
-            {
-                if (prime > Math.Sqrt(suggestedPrime))
-                    return true;
-                if (suggestedPrime % prime == 0)
-                    return false;
-            }
-            return true;
-        }
 
         public ESieve(int number)
         {
@@ -38,6 +25,16 @@ namespace Shared
         public bool IsPrime(int number)
         {
             return Array.BinarySearch(primes, number) > -1;
+        }
+
+        public long Aggregate(Func<long, long, long> func)
+        {
+            long total = 0;
+            foreach (int prime in primes)
+            {
+                total = func(total, prime);
+            }
+            return total;
         }
     }
 }
