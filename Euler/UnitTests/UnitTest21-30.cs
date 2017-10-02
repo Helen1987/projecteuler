@@ -84,5 +84,13 @@ namespace UnitTests
             var task = new Task30();
             Assert.AreEqual(443839, task.Run(), $"The sum of all the numbers that can be written as the sum of fifth powers of their digits is {task.Run()}");
         }
+
+        [TestMethod]
+        public void TestCoinSums()
+        {
+            int sum = 200;
+            var task = new Task31();
+            Assert.AreEqual(73682, task.Run(sum), $"£2 can be made using any number of coins in different ways");
+        }
     }
 }
