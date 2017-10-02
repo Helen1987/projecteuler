@@ -53,5 +53,13 @@ namespace UnitTests
             var task = new Task26();
             Assert.AreEqual(983, task.Run(maxNumber), $"The value of d < {maxNumber} for which 1/d contains the longest recurring cycle in its decimal fraction part is {task.Run(maxNumber)}");
         }
+
+        [TestMethod]
+        public void TestQuadraticPrimes()
+        {
+            int aMax = 1000, bMax = 1000;
+            var task = new Task27();
+            Assert.AreEqual(-59231, task.Run(aMax, bMax), $"The quadratic expression that produces the maximum number of primes for consecutive values of n is {task.Run(aMax, bMax)}");
+        }
     }
 }
