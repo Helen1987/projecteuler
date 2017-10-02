@@ -61,5 +61,13 @@ namespace UnitTests
             var task = new Task27();
             Assert.AreEqual(-59231, task.Run(aMax, bMax), $"The quadratic expression that produces the maximum number of primes for consecutive values of n is {task.Run(aMax, bMax)}");
         }
+
+        [TestMethod]
+        public void TestNumberSpiralDiagonals()
+        {
+            int rows = 1001;
+            var task = new Task28();
+            Assert.AreEqual(669171001, task.Run(rows), $"The sum of the numbers on the diagonals in a {rows} by {rows} spiral is {task.Run(rows)}");
+        }
     }
 }
