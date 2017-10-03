@@ -74,6 +74,7 @@
     <Compile Include="21-30\Task29 - Distinct powers.cs" />
     <Compile Include="21-30\Task30 - Digit fifth powers.cs" />
     <Compile Include="31-40\Task31 - Coin sums.cs" />
+    <Compile Include="31-40\Task32 - Pandigital products.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
