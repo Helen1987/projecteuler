@@ -33,7 +33,15 @@ namespace UnitTests
         public void TestDigitFactorials()
         {
             var task = new Task34();
-            Assert.AreEqual(40730, task.Run(), $"The sum of all numbers which are equal to the sum of the factorial of their digits is is {task.Run()}");
+            Assert.AreEqual(40730, task.Run(), $"The sum of all numbers which are equal to the sum of the factorial of their digits is {task.Run()}");
+        }
+
+        [TestMethod]
+        public void TestCircularPrimes()
+        {
+            int maxValue = 1000000;
+            var task = new Task35(maxValue);
+            Assert.AreEqual(55, task.Run(), $"Circular primes are there below {maxValue} is {task.Run()}");
         }
     }
 }
