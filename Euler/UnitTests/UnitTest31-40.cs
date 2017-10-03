@@ -21,5 +21,12 @@ namespace UnitTests
             var task = new Task32();
             Assert.AreEqual(45228, task.Run(), $"Pandigital products sum is incorrect");
         }
+
+        [TestMethod]
+        public void TestDigitCancellingFractions()
+        {
+            var task = new Task33();
+            Assert.AreEqual(100, task.Run(), $"The product of these four fractions is given in its lowest common terms, find the value of the denominator is {task.Run()}");
+        }
     }
 }

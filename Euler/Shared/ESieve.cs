@@ -36,5 +36,10 @@ namespace Shared
             }
             return total;
         }
+
+        public IEnumerable<int> GetPrimes()
+        {
+            return primes;
+        }
     }
 }
