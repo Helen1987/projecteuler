@@ -76,6 +76,7 @@
     <Compile Include="31-40\Task31 - Coin sums.cs" />
     <Compile Include="31-40\Task32 - Pandigital products.cs" />
     <Compile Include="31-40\Task33 - Digit cancelling fractions.cs" />
+    <Compile Include="31-40\Task34 - Digit factorials.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

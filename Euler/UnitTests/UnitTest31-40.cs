@@ -28,5 +28,12 @@ namespace UnitTests
             var task = new Task33();
             Assert.AreEqual(100, task.Run(), $"The product of these four fractions is given in its lowest common terms, find the value of the denominator is {task.Run()}");
         }
+
+        [TestMethod]
+        public void TestDigitFactorials()
+        {
+            var task = new Task34();
+            Assert.AreEqual(40730, task.Run(), $"The sum of all numbers which are equal to the sum of the factorial of their digits is is {task.Run()}");
+        }
     }
 }
