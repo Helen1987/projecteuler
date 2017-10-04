@@ -58,5 +58,12 @@ namespace UnitTests
             var task = new Task37();
             Assert.AreEqual(748317, task.Run(), $"The sum of the only eleven primes that are both truncatable from left to right and right to left is incorrect");
         }
+
+        [TestMethod]
+        public void TestPandigitalMultiples()
+        {
+            var task = new Task38();
+            Assert.AreEqual("932718654", task.Run(), $"The largest 1 to 9 pandigital 9-digit number that can be formed as the concatenated product of an integer with (1,2, ... , n) where n > 1 is incorrect");
+        }
     }
 }

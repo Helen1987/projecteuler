@@ -34,25 +34,7 @@ namespace Euler
             }
         }
 
-        private IEnumerable<int> GetPermutations(int[] digits)
-        {
-            if (digits.Length == 1)
-            {
-                yield return digits[0];
-            }
-
-            for (int i = 0; i < digits.Length; ++i)
-            {
-                var restDigits = digits.ToList();
-                restDigits.RemoveAt(i);
-                foreach (int perm in GetPermutations(restDigits.ToArray()))
-                {
-                    yield return digits[i] * (int)Math.Pow(10, restDigits.Count) + perm;
-                }
-            }
-        }
-
-        public void CheckPermutationPrime(int prime)
+        /*public void CheckPermutationPrime(int prime)
         {
             int[] digits = GetDigits(prime).ToArray();
             List<int> perm = new List<int>();
@@ -64,7 +46,7 @@ namespace Euler
                 perm.Add(permutation);
             }
             perm.ForEach(circularPrime => _circularPrimes.Add(circularPrime));
-        }
+        }*/
         
         public void CheckCircularPrime(int prime)
         {

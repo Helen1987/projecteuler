@@ -80,6 +80,7 @@
     <Compile Include="31-40\Task35 - Circular primes.cs" />
     <Compile Include="31-40\Task36 - Double-base palindromes.cs" />
     <Compile Include="31-40\Task37 - Truncatable primes.cs" />
+    <Compile Include="31-40\Task38 - Pandigital multiples.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
