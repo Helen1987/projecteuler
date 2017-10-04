@@ -78,6 +78,7 @@
     <Compile Include="31-40\Task33 - Digit cancelling fractions.cs" />
     <Compile Include="31-40\Task34 - Digit factorials.cs" />
     <Compile Include="31-40\Task35 - Circular primes.cs" />
+    <Compile Include="31-40\Task36 - Double-base palindromes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

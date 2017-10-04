@@ -43,5 +43,13 @@ namespace UnitTests
             var task = new Task35(maxValue);
             Assert.AreEqual(55, task.Run(), $"Circular primes are there below {maxValue} is {task.Run()}");
         }
+
+        [TestMethod]
+        public void TestDoubleBasePalindromes()
+        {
+            int maxValue = 1000000;
+            var task = new Task36();
+            Assert.AreEqual(872187, task.Run(maxValue), $"The sum of all numbers, less than {maxValue}, which are palindromic in base 10 and base 2 is {task.Run(maxValue)}");
+        }
     }
 }
