@@ -65,5 +65,12 @@ namespace UnitTests
             var task = new Task38();
             Assert.AreEqual("932718654", task.Run(), $"The largest 1 to 9 pandigital 9-digit number that can be formed as the concatenated product of an integer with (1,2, ... , n) where n > 1 is incorrect");
         }
+
+        [TestMethod]
+        public void TestIntegerRightTriangles()
+        {
+            var task = new Task39();
+            Assert.AreEqual(840, task.Run(), $"The value of p ≤ 1000 for which number of solutions maximised is incorrect");
+        }
     }
 }
