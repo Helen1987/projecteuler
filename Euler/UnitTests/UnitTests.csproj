@@ -53,6 +53,7 @@
     <Compile Include="UnitTest11-20.cs" />
     <Compile Include="UnitTest21-30.cs" />
     <Compile Include="UnitTest31-40.cs" />
+    <Compile Include="UnitTest41-50.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
