@@ -13,5 +13,12 @@ namespace UnitTests
             var task = new Task41();
             Assert.AreEqual(7652413, task.Run(), $"The largest n-digit pandigital prime is incorrect");
         }
+
+        [TestMethod]
+        public void TestCodedTriangleNumbers()
+        {
+            var task = new Task42();
+            Assert.AreEqual(162, task.Run(), $"How many are triangle words is incorrect");
+        }
     }
 }
