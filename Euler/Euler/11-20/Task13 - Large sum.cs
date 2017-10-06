@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
+using Shared;
 
 namespace Euler
 {
@@ -125,21 +126,9 @@ namespace Euler
 
         public string Run(int numbersCount)
         {
-            int previousSum = 0, currentSum = 0;
-            string result = string.Empty;
-            for (int i = numbers[0].Length - 1; i >= 0; --i)
-            {
-                currentSum = GetSumOfDigits(i, previousSum);
-                result = (currentSum % 10).ToString() + result;
-                previousSum = currentSum / 10;
-            }
-            result = previousSum.ToString() + result;
+            var bigNumbers = new NumberAsString();
 
-            /*BigInteger bigresult = new BigInteger();
-            foreach (var number in numbers)
-            {
-                bigresult += BigInteger.Parse(number);
-            }*/
+            string result = bigNumbers.Sum(numbers);
 
             return result.Substring(0, numbersCount);
         }
