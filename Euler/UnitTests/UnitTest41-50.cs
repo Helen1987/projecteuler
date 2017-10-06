@@ -20,5 +20,12 @@ namespace UnitTests
             var task = new Task42();
             Assert.AreEqual(162, task.Run(), $"How many are triangle words is incorrect");
         }
+
+        [TestMethod]
+        public void TestSubStringDivisibility()
+        {
+            var task = new Task43();
+            Assert.AreEqual(16695334890, task.Run(), $"The sum of all 0 to 9 pandigital numbers with this property");
+        }
     }
 }

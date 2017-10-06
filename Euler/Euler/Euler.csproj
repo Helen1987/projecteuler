@@ -84,6 +84,7 @@
     <Compile Include="31-40\Task39 - Integer right triangles.cs" />
     <Compile Include="31-40\Task40 - Champernowne%27s constant.cs" />
     <Compile Include="41-50\Task42 - Coded triangle numbers.cs" />
+    <Compile Include="41-50\Task43 - Sub-string divisibility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="41-50\Task41 - Pandigital prime.cs" />

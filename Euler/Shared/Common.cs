@@ -8,7 +8,7 @@ namespace Shared
 {
     public class Common
     {
-        public static IEnumerable<long> GetPermutations(int[] digits)
+        public static IEnumerable<long> GetPermutations(int[] digits, Dictionary<int, Predicate<long>> restrictions = null)
         {
             if (digits.Length == 1)
             {
@@ -19,9 +19,17 @@ namespace Shared
             {
                 var restDigits = digits.ToList();
                 restDigits.RemoveAt(i);
-                foreach (long perm in GetPermutations(restDigits.ToArray()))
+                foreach (long perm in GetPermutations(restDigits.ToArray(), restrictions))
                 {
-                    yield return digits[i] * (int)Math.Pow(10, restDigits.Count) + perm;
+                    if (restrictions != null)
+                    {
+                        if (restrictions.ContainsKey(restDigits.Count))
+                        {
+                            if (!restrictions[restDigits.Count](perm))
+                                continue;
+                        }
+                    }
+                    yield return digits[i] * (long)Math.Pow(10, restDigits.Count) + perm;
                 }
             }
         }
