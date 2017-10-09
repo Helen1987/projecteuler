@@ -18,6 +18,16 @@ namespace Shared
             FindPrimeDivisors(number);
         }
 
+        public List<int> GetFactors()
+        {
+            List<int> factors = new List<int>();
+            for (int i = 0; i < _primes.Count; ++i)
+            {
+                factors.Add((int)Math.Pow(_primes[i], _counts[i]));
+            }
+            return factors;
+        }
+
         private void FindPrimeDivisors(int number)
         {
             foreach (int prime in _sieve.GetPrimes())

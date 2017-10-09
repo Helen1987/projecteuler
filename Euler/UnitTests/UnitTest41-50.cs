@@ -48,5 +48,12 @@ namespace UnitTests
             var task = new Task46();
             Assert.AreEqual(5777, task.Run(), $"The smallest odd composite that cannot be written as the sum of a prime and twice a square is incorrect");
         }
+
+        [TestMethod]
+        public void TestDistinctPrimesFactors()
+        {
+            var task = new Task47();
+            Assert.AreEqual(134043, task.Run(), $"The first of the first four consecutive integers to have four distinct prime factors each is incorrect");
+        }
     }
 }
