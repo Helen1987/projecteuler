@@ -49,5 +49,25 @@ namespace Shared
             Array.Reverse(arr);
             return numberInBase.Equals(new string(arr));
         }
+
+        public static bool IsHexagonal(long number)
+        {
+            double penTest = (Math.Sqrt(1 + 8 * number) + 1.0) / 4.0;
+            return penTest == ((int)penTest);
+        }
+
+        public static bool IsPentagonal(long number)
+        {
+            double penTest = (Math.Sqrt(1 + 24 * number) + 1.0) / 6.0;
+            return penTest == ((int)penTest);
+        }
+
+        public static bool IsTriangular(long number)
+        {
+            double penTest = (Math.Sqrt(1 + 8 * number) - 1.0) / 2.0;
+            return penTest == ((int)penTest);
+        }
+
+        public static long GetHexagonal(int n) => n * (2 * n - 1);
     }
 }

@@ -34,5 +34,12 @@ namespace UnitTests
             var task = new Task44();
             Assert.AreEqual(5482660, task.Run(), $"Their sum and difference are pentagonal and D = | Pk − Pj| is minimised is incorrect");
         }
+
+        [TestMethod]
+        public void TestTriangularPentagonalHexagonal()
+        {
+            var task = new Task45();
+            Assert.AreEqual(1533776805, task.Run(), $"The next triangle number that is also pentagonal and hexagonal is incorrect");
+        }
     }
 }
