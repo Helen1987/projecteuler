@@ -41,5 +41,12 @@ namespace UnitTests
             var task = new Task45();
             Assert.AreEqual(1533776805, task.Run(), $"The next triangle number that is also pentagonal and hexagonal is incorrect");
         }
+
+        [TestMethod]
+        public void TestGoldbachsOtherConjecture()
+        {
+            var task = new Task46();
+            Assert.AreEqual(5777, task.Run(), $"The smallest odd composite that cannot be written as the sum of a prime and twice a square is incorrect");
+        }
     }
 }
