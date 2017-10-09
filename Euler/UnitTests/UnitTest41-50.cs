@@ -55,5 +55,20 @@ namespace UnitTests
             var task = new Task47();
             Assert.AreEqual(134043, task.Run(), $"The first of the first four consecutive integers to have four distinct prime factors each is incorrect");
         }
+
+        [TestMethod]
+        public void TestSelfPowers()
+        {
+            int maxNumber = 1000;
+            var task = new Task48();
+            Assert.AreEqual(9110846700, task.Run(maxNumber), $"The last ten digits of the series, 1^1 + 2^2 + 3^3 + ... + 1000^1000 is incorrect");
+        }
+
+        [TestMethod]
+        public void TestPrimePermutations()
+        {
+            var task = new Task49();
+            Assert.AreEqual("296962999629", task.Run(), $"12-digit number formed by concatenating the three terms in this sequence is incorrect");
+        }
     }
 }

@@ -37,9 +37,9 @@ namespace Shared
             return total;
         }
 
-        public IEnumerable<int> GetPrimes()
+        public IEnumerable<int> GetPrimes(int number = 1)
         {
-            return primes;
+            return primes.Where(prime => prime > number);
         }
     }
 }
