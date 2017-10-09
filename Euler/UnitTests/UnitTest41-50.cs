@@ -27,5 +27,12 @@ namespace UnitTests
             var task = new Task43();
             Assert.AreEqual(16695334890, task.Run(), $"The sum of all 0 to 9 pandigital numbers with this property");
         }
+
+        [TestMethod]
+        public void TestPentagonNumbers()
+        {
+            var task = new Task44();
+            Assert.AreEqual(5482660, task.Run(), $"Their sum and difference are pentagonal and D = | Pk − Pj| is minimised is incorrect");
+        }
     }
 }
