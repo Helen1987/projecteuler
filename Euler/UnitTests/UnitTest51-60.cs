@@ -18,9 +18,8 @@ namespace UnitTests
         [TestMethod]
         public void TestPowerfulDigitSum()
         {
-            var task = new Task56();
-            int maxNumber = 100;
-            Assert.AreEqual(972, task.Run(maxNumber), $"The maximum digital sum is incorrect");
+            var task = new Task52();
+            Assert.AreEqual(142857, task.Run(), $"The smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits is incorrect");
         }
     }
 }
