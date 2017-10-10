@@ -70,5 +70,13 @@ namespace UnitTests
             var task = new Task49();
             Assert.AreEqual("296962999629", task.Run(), $"12-digit number formed by concatenating the three terms in this sequence is incorrect");
         }
+
+        [TestMethod]
+        public void TestConsecutivePrimeSum()
+        {
+            int maxNumber = 1000000;
+            var task = new Task50();
+            Assert.AreEqual(997651, task.Run(maxNumber), $"Prime, below {maxNumber}, can be written as the sum of the most consecutive primes is incorrect");
+        }
     }
 }

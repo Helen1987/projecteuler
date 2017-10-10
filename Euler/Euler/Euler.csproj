@@ -91,6 +91,7 @@
     <Compile Include="41-50\Task47 - Distinct primes factors.cs" />
     <Compile Include="41-50\Task48 - Self powers.cs" />
     <Compile Include="41-50\Task49 - Prime permutations.cs" />
+    <Compile Include="41-50\Task50 - Consecutive prime sum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="41-50\Task41 - Pandigital prime.cs" />
