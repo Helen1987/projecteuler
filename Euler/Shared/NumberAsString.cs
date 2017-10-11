@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Shared
 {
-    public class NumberAsString
+    public static class NumberAsString
     {
-        private int GetSumOfDigits(int digitNumber, int previousValue, string[] numbers)
+        private static int GetSumOfDigits(int digitNumber, int previousValue, string[] numbers)
         {
             int sum = 0;
             foreach (var number in numbers)
@@ -18,7 +18,7 @@ namespace Shared
             return sum + previousValue;
         }
 
-        public string Sum(string[] numbers)
+        public static string Sum(string[] numbers)
         {
             int previousSum = 0, currentSum = 0;
             string result = string.Empty;
@@ -28,7 +28,10 @@ namespace Shared
                 result = (currentSum % 10).ToString() + result;
                 previousSum = currentSum / 10;
             }
-            result = previousSum.ToString() + result;
+            if (previousSum > 0)
+            {
+                result = previousSum.ToString() + result;
+            }
 
             return result;
         }

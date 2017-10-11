@@ -126,9 +126,7 @@ namespace Euler
 
         public string Run(int numbersCount)
         {
-            var bigNumbers = new NumberAsString();
-
-            string result = bigNumbers.Sum(numbers);
+            string result = NumberAsString.Sum(numbers);
 
             return result.Substring(0, numbersCount);
         }
