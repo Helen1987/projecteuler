@@ -92,6 +92,7 @@
     <Compile Include="41-50\Task49 - Prime permutations.cs" />
     <Compile Include="41-50\Task50 - Consecutive prime sum.cs" />
     <Compile Include="51-60\Task55 - Lychrel numbers.cs" />
+    <Compile Include="51-60\Task56 - Powerful digit sum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="41-50\Task41 - Pandigital prime.cs" />
