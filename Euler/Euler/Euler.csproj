@@ -82,7 +82,6 @@
     <Compile Include="31-40\Task37 - Truncatable primes.cs" />
     <Compile Include="31-40\Task38 - Pandigital multiples.cs" />
     <Compile Include="31-40\Task39 - Integer right triangles.cs" />
-    <Compile Include="31-40\Task40 - Champernowne%27s constant.cs" />
     <Compile Include="41-50\Task42 - Coded triangle numbers.cs" />
     <Compile Include="41-50\Task43 - Sub-string divisibility.cs" />
     <Compile Include="41-50\Task44 - Pentagon numbers.cs" />
@@ -92,6 +91,7 @@
     <Compile Include="41-50\Task48 - Self powers.cs" />
     <Compile Include="41-50\Task49 - Prime permutations.cs" />
     <Compile Include="41-50\Task50 - Consecutive prime sum.cs" />
+    <Compile Include="51-60\Task55 - Lychrel numbers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="41-50\Task41 - Pandigital prime.cs" />
