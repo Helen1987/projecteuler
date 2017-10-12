@@ -94,6 +94,7 @@
     <Compile Include="51-60\Task55 - Lychrel numbers.cs" />
     <Compile Include="51-60\Task56 - Powerful digit sum.cs" />
     <Compile Include="51-60\Task51 - Prime digit replacements.cs" />
+    <Compile Include="51-60\Task57 - Square root convergents.cs" />
     <Compile Include="51-60\Task52 - Permuted multiples.cs" />
     <Compile Include="51-60\Task53 - Combinatoric selections.cs" />
     <Compile Include="51-60\Task54 - Poker hands.cs" />

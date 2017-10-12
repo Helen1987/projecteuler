@@ -29,5 +29,13 @@ namespace UnitTests
             var task = new Task53();
             Assert.AreEqual(4075, task.Run(maxValue), $"Values of nCr, for 1 ≤ n ≤ 100, are greater than one-millio are incorrect");
         }
+
+        [TestMethod]
+        public void TestSquareRootConvergents()
+        {
+            var task = new Task57();
+            int expansionNumber = 1000;
+            Assert.AreEqual(153, task.Run(expansionNumber), $"In the first {expansionNumber} how many fractions contain a numerator with more digits than denominator is incorrect");
+        }
     }
 }
