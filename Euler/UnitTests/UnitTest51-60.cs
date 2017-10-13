@@ -54,6 +54,14 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void TestXORDecryption()
+        {
+            var task = new Task59();
+            int keyLength = 3;
+            Assert.AreEqual(107359, task.Run(keyLength), $"The lowest sum for a set of five primes for which any two primes concatenate to produce another prime is incorrect");
+        }
+
+        [TestMethod]
         public void TestPrimePairSets()
         {
             var task = new Task60();

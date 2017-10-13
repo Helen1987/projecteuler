@@ -98,6 +98,7 @@
     <Compile Include="51-60\Task52 - Permuted multiples.cs" />
     <Compile Include="51-60\Task53 - Combinatoric selections.cs" />
     <Compile Include="51-60\Task54 - Poker hands.cs" />
+    <Compile Include="51-60\Task59 - XOR decryption.cs" />
     <Compile Include="51-60\Task60 - Prime pair sets.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +108,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\cipher.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\p022_names.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

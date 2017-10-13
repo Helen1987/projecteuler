@@ -10,8 +10,9 @@ namespace Euler
     {
         static void Main(string[] args)
         {
-            var task = new Task54();
-            Console.WriteLine($"How many hands does Player 1 win is { task.Run() }");
+            var task = new Task59();
+            int keyLength = 3;
+            Console.WriteLine($"The sum of the ASCII values in the original text is { task.Run(keyLength) }");
         }
     }
 }
