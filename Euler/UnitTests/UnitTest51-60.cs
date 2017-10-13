@@ -8,15 +8,7 @@ namespace UnitTests
     public class UnitTest6
     {
         [TestMethod]
-        public void TestLychrelNumbers()
-        {
-            var task = new Task55();
-            int maxNumber = 10000;
-            Assert.AreEqual(249, task.Run(maxNumber), $"Count of Lychrel numbers below {maxNumber} is incorrect");
-        }
-
-        [TestMethod]
-        public void TestPowerfulDigitSum()
+        public void TestPermutedMultiples()
         {
             var task = new Task52();
             Assert.AreEqual(142857, task.Run(), $"The smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits is incorrect");
@@ -35,6 +27,22 @@ namespace UnitTests
         {
             var task = new Task54();
             Assert.AreEqual(376, task.Run(), $"How many hands does Player 1 win is incorrect");
+        }
+
+        [TestMethod]
+        public void TestLychrelNumbers()
+        {
+            var task = new Task55();
+            int maxNumber = 10000;
+            Assert.AreEqual(249, task.Run(maxNumber), $"Count of Lychrel numbers below {maxNumber} is incorrect");
+        }
+
+        [TestMethod]
+        public void TestPowerfulDigitSum()
+        {
+            var task = new Task56();
+            int maxNumber = 100;
+            Assert.AreEqual(972, task.Run(maxNumber), $"CConsidering natural numbers of the form, ab, where a, b < {maxNumber}, what is the maximum digital sum is incorrect");
         }
 
         [TestMethod]
