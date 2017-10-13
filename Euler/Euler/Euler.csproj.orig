@@ -91,12 +91,13 @@
     <Compile Include="41-50\Task48 - Self powers.cs" />
     <Compile Include="41-50\Task49 - Prime permutations.cs" />
     <Compile Include="41-50\Task50 - Consecutive prime sum.cs" />
+<<<<<<< HEAD
     <Compile Include="51-60\Task55 - Lychrel numbers.cs" />
     <Compile Include="51-60\Task56 - Powerful digit sum.cs" />
+=======
     <Compile Include="51-60\Task51 - Prime digit replacements.cs" />
     <Compile Include="51-60\Task52 - Permuted multiples.cs" />
-    <Compile Include="51-60\Task53 - Combinatoric selections.cs" />
-    <Compile Include="51-60\Task54 - Poker hands.cs" />
+>>>>>>> feat: Task52 - Permuted multiples
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="41-50\Task41 - Pandigital prime.cs" />
@@ -109,9 +110,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="data\p042_words.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\p054_poker.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

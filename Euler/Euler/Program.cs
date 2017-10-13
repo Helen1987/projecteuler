@@ -10,9 +10,8 @@ namespace Euler
     {
         static void Main(string[] args)
         {
-            var task = new Task3();
-            long max = 600851475143;
-            Console.WriteLine($"Largest prime factor of {max} is {task.Run(max)}");
+            var task = new Task54();
+            Console.WriteLine($"How many hands does Player 1 win is { task.Run() }");
         }
     }
 }
