@@ -98,6 +98,7 @@
     <Compile Include="51-60\Task52 - Permuted multiples.cs" />
     <Compile Include="51-60\Task53 - Combinatoric selections.cs" />
     <Compile Include="51-60\Task54 - Poker hands.cs" />
+    <Compile Include="51-60\Task60 - Prime pair sets.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="41-50\Task41 - Pandigital prime.cs" />

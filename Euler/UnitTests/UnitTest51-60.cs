@@ -45,6 +45,12 @@ namespace UnitTests
             Assert.AreEqual(153, task.Run(expansionNumber), $"In the first {expansionNumber} how many fractions contain a numerator with more digits than denominator is incorrect");
         }
 
+        [TestMethod]
+        public void TestPrimePairSets()
+        {
+            var task = new Task60();
+            Assert.AreEqual(26033, task.Run(), $"The lowest sum for a set of five primes for which any two primes concatenate to produce another prime is incorrect");
+        }
 
     }
 }

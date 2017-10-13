@@ -45,6 +45,7 @@
     <Compile Include="Common.cs" />
     <Compile Include="Divisors.cs" />
     <Compile Include="ESieve.cs" />
+    <Compile Include="MillerRabin.cs" />
     <Compile Include="NumberAsString.cs" />
     <Compile Include="PrimeDivisors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
