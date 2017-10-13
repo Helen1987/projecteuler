@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Euler
 {
-    enum Combination { HighCard, Pair, ThreeOfKind, Straight, Flush, FullHouse2, FullHouse3, FourOfAKind, StraightFlush, RoyalFlash }
+    enum Combination { HighCard, Pair, TwoPairsLow, TwoPairsHigh, ThreeOfKind, Straight, Flush, FullHouse2, FullHouse3, FourOfAKind, StraightFlush, RoyalFlash }
 
     enum Suit { H, C, S, D }
 
-    enum CardValue { One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace }
+    enum CardValue { Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace }
 
     struct CombinationValue
     {
@@ -29,7 +29,6 @@ namespace Euler
     {
         private static Dictionary<char, CardValue> cardMapper = new Dictionary<char, CardValue>()
         {
-            { '1', CardValue.One },
             { '2', CardValue.Two },
             { '3', CardValue.Three },
             { '4', CardValue.Four },
@@ -85,14 +84,6 @@ namespace Euler
 
             for (int i = 0; i < length; ++i)
             {
-                if (currentCombinations.Length < i)
-                {
-                    return -1;
-                }
-                if (otherCombinations.Length < i)
-                {
-                    return 1;
-                }
                 if (currentCombinations[i].Combination == otherCombinations[i].Combination)
                 {
                     if (currentCombinations[i].Value == otherCombinations[i].Value)
@@ -123,56 +114,78 @@ namespace Euler
         {
             if (AreInTheSameSuit())
             {
-                if (_combination.Last().Value == CardValue.Ten && _combination.First().Value == CardValue.Ace)
+                if (_counts.Count() == 5)
                 {
-                    yield return new CombinationValue(Combination.RoyalFlash, CardValue.Ace);
-                }
-                else
-                {
-                    if (_combination.First().Value - _combination.Last().Value == 4)
+                    if (_combination.Last().Value == CardValue.Ten && _combination.First().Value == CardValue.Ace)
                     {
-                        yield return new CombinationValue(Combination.StraightFlush, _combination.First().Value);
+                        yield return new CombinationValue(Combination.RoyalFlash, CardValue.Ace);
                     }
                     else
                     {
-                        yield return new CombinationValue(Combination.Flush, _combination.First().Value);
-                    }
-                }
-            }
-            else if (_combination.First().Value - _combination.Last().Value == 4)
-            {
-                yield return new CombinationValue(Combination.Straight, _combination.First().Value);
-            }
-            else{
-                if (_counts.ContainsValue(3) && _counts.ContainsValue(2))
-                {
-                    var three = _counts.Where(comb => comb.Value == 3).First();
-                    yield return new CombinationValue(Combination.FullHouse3, three.Key);
-
-                    var pair = _counts.Where(comb => comb.Value == 2).First();
-                    yield return new CombinationValue(Combination.FullHouse2, pair.Key);
-                }
-                else
-                {
-                    foreach (var sequence in _counts)
-                    {
-                        if (sequence.Value == 4)
+                        if (_combination.First().Value - _combination.Last().Value == 4)
                         {
-                            yield return new CombinationValue(Combination.FourOfAKind, sequence.Key);
-                        }
-                        else if (sequence.Value == 3)
-                        {
-                            yield return new CombinationValue(Combination.ThreeOfKind, sequence.Key);
-                        }
-                        else if (sequence.Value == 2)
-                        {
-                            yield return new CombinationValue(Combination.Pair, sequence.Key);
+                            yield return new CombinationValue(Combination.StraightFlush, _combination.First().Value);
                         }
                         else
                         {
-                            yield return new CombinationValue(Combination.HighCard, sequence.Key);
+                            yield return new CombinationValue(Combination.Flush, _combination.First().Value);
                         }
                     }
+                }
+                else
+                {
+                    yield return new CombinationValue(Combination.Flush, _combination.First().Value);
+                }
+            }
+            else if (_counts.Count() == 5 && _combination.First().Value - _combination.Last().Value == 4)
+            {
+                yield return new CombinationValue(Combination.Straight, _combination.First().Value);
+            }
+            else
+            {
+                if (_counts.ContainsValue(4))
+                {
+                    var four = _counts.Where(comb => comb.Value == 4).First();
+                    _counts.Remove(four.Key);
+                    yield return new CombinationValue(Combination.FourOfAKind, four.Key);
+                }
+                else if (_counts.ContainsValue(3))
+                {
+                    var three = _counts.Where(comb => comb.Value == 3).First();
+                    _counts.Remove(three.Key);
+
+                    if (_counts.ContainsValue(2))
+                    {
+                        yield return new CombinationValue(Combination.FullHouse3, three.Key);
+
+                        var pair = _counts.Where(comb => comb.Value == 2).First();
+                        _counts.Remove(pair.Key);
+                        yield return new CombinationValue(Combination.FullHouse2, pair.Key);
+                    }
+                    else
+                    {
+                        yield return new CombinationValue(Combination.ThreeOfKind, three.Key);
+                    }
+                }
+                else if (_counts.ContainsValue(2))
+                {
+                    var pairs = _counts.Where(comb => comb.Value == 2).OrderByDescending(card => card.Key).ToArray();
+                    if (pairs.Length == 2)
+                    {
+                        _counts.Remove(pairs[0].Key);
+                        yield return new CombinationValue(Combination.TwoPairsHigh, pairs[0].Key);
+                        _counts.Remove(pairs[1].Key);
+                        yield return new CombinationValue(Combination.TwoPairsLow, pairs[1].Key);
+                    }
+                    else
+                    {
+                        _counts.Remove(pairs[0].Key);
+                        yield return new CombinationValue(Combination.Pair, pairs[0].Key);
+                    }
+                }
+                foreach (var sequence in _counts)
+                {
+                    yield return new CombinationValue(Combination.HighCard, sequence.Key);
                 }
             }
         }

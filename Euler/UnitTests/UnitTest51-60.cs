@@ -31,11 +31,20 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void TestPokerHands()
+        {
+            var task = new Task54();
+            Assert.AreEqual(376, task.Run(), $"How many hands does Player 1 win is incorrect");
+        }
+
+        [TestMethod]
         public void TestSquareRootConvergents()
         {
             var task = new Task57();
             int expansionNumber = 1000;
             Assert.AreEqual(153, task.Run(expansionNumber), $"In the first {expansionNumber} how many fractions contain a numerator with more digits than denominator is incorrect");
         }
+
+
     }
 }
